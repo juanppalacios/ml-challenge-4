@@ -5,5 +5,12 @@
 # ignore our large training and testing data sets
 data
 
+# ignore temp notes
+notebook/*.txt
+notebook/*.md
+
+# ignore tmp files under src
+src/tmp.py
+
 # ignore .vscode folders
 .vscode/
