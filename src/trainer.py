@@ -1,6 +1,8 @@
 '''
   A training class to fit our training data to any model
 
+  object trainer: https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection/blob/master/README.md
+  
   source: https://xylambda.github.io/blog/python/pytorch/machine-learning/2021/01/04/pytorch_trainer.html
 '''
 import os
