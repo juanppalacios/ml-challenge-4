@@ -1,14 +1,17 @@
 
 import sys
 import logging as log
+import numpy as np
 
-import matplotlib.pyplot as plt # todo: for use in `visualize`
-import torch # todo: for use in `load_data`
+import matplotlib.pyplot as plt
 
-from load import CustomDataset
+import torch
+import torchvision
+import torchvision.transforms as transforms
+import torchvision.datasets as datasets
 
-class Reporter():
-  def __init__(self, name = None, level = None):
+class Logger():
+  def __init__(self, name = None, level = 'DEBUG'):
 
     self.log_levels = {
       'DEBUG'  : log.DEBUG,
@@ -48,7 +51,6 @@ class Reporter():
     self.logger.setLevel(self.log_levels[level])
 
 
-
   def debug(self, message):
     '''
       report a message of severity 'DEBUG'
@@ -73,27 +75,3 @@ class Reporter():
     '''
     self.logger.error(message)
     sys.exit(1)
-
-
-
-  def visualize(self, data, dest = None):
-    '''
-      plot our data out to a terminal or optional path
-    '''
-    raise NotImplementedError
-
-
-
-  def load_data():
-    '''
-      load in our training, validation, or testing datasets
-      returns our pytorch *_loader
-    '''
-    raise NotImplementedError
-
-  def save_data():
-    '''
-      save our predicted labels for Kaggle submission
-    '''
-    raise NotImplementedError
-

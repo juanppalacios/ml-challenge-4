@@ -1,0 +1,18 @@
+{
+  "class size": 10,
+  "layers": [
+    {"convolution 2D": [3, 6, 5]},
+    {"max pooling 2D": [2, 2]},
+    {"convolution 2D": [6, 16, 5]},
+    {"flatten": [1,1]},
+    {"fully connected": [400, 120]},
+    {"fully connected": [120, 84]},
+    {"fully connected": [84, 10]}
+  ],
+  "criterion": "cross entropy loss",
+  "optimizer": {
+    "name": "SGD",
+    "learning rate": 0.001,
+    "momentum": 0.9
+  }
+}
